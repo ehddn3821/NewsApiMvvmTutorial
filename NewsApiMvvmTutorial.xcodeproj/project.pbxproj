@@ -16,6 +16,7 @@
 		35E53E2627EB57250074EF0D /* NewsApiMvvmTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E53E2527EB57250074EF0D /* NewsApiMvvmTutorialTests.swift */; };
 		35E53E3027EB57250074EF0D /* NewsApiMvvmTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E53E2F27EB57250074EF0D /* NewsApiMvvmTutorialUITests.swift */; };
 		35E53E3227EB57250074EF0D /* NewsApiMvvmTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E53E3127EB57250074EF0D /* NewsApiMvvmTutorialUITestsLaunchTests.swift */; };
+		35E53E4027EB59F20074EF0D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E53E3F27EB59F20074EF0D /* Article.swift */; };
 		AEE62DBCDF3662941047CB91 /* Pods_NewsApiMvvmTutorial_NewsApiMvvmTutorialUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 783C91BF822258BBAC102274 /* Pods_NewsApiMvvmTutorial_NewsApiMvvmTutorialUITests.framework */; };
 		CAD3DD84A5C37ED09E8CAD67 /* Pods_NewsApiMvvmTutorialTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D6BE1012350A336CE472F4 /* Pods_NewsApiMvvmTutorialTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		35E53E2B27EB57250074EF0D /* NewsApiMvvmTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsApiMvvmTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E53E2F27EB57250074EF0D /* NewsApiMvvmTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiMvvmTutorialUITests.swift; sourceTree = "<group>"; };
 		35E53E3127EB57250074EF0D /* NewsApiMvvmTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApiMvvmTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35E53E3F27EB59F20074EF0D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		58D6BE1012350A336CE472F4 /* Pods_NewsApiMvvmTutorialTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApiMvvmTutorialTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C89BE680186EAA6C4EBF65 /* Pods-NewsApiMvvmTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApiMvvmTutorial.debug.xcconfig"; path = "Target Support Files/Pods-NewsApiMvvmTutorial/Pods-NewsApiMvvmTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		783C91BF822258BBAC102274 /* Pods_NewsApiMvvmTutorial_NewsApiMvvmTutorialUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsApiMvvmTutorial_NewsApiMvvmTutorialUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 		35E53E0D27EB57230074EF0D /* NewsApiMvvmTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				35E53E3E27EB59E50074EF0D /* Models */,
 				35E53E0E27EB57230074EF0D /* AppDelegate.swift */,
 				35E53E1027EB57230074EF0D /* SceneDelegate.swift */,
 				35E53E1227EB57230074EF0D /* ViewController.swift */,
@@ -141,6 +144,14 @@
 			path = NewsApiMvvmTutorialUITests;
 			sourceTree = "<group>";
 		};
+		35E53E3E27EB59E50074EF0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				35E53E3F27EB59F20074EF0D /* Article.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		393B8938EDD5924F2DC57FE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +172,6 @@
 				22E449F980C77070DA21291A /* Pods-NewsApiMvvmTutorialTests.debug.xcconfig */,
 				BD8340FE7FB22843452DAC24 /* Pods-NewsApiMvvmTutorialTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -403,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E53E4027EB59F20074EF0D /* Article.swift in Sources */,
 				35E53E1327EB57230074EF0D /* ViewController.swift in Sources */,
 				35E53E0F27EB57230074EF0D /* AppDelegate.swift in Sources */,
 				35E53E1127EB57230074EF0D /* SceneDelegate.swift in Sources */,
