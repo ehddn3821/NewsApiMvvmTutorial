@@ -13,6 +13,7 @@ protocol ArticleServiceProtocol {
     func getArticles() -> Observable<[Article]>
 }
 
+
 struct ArticleService: ArticleServiceProtocol {
 
     func getArticles() -> Observable<[Article]> {
