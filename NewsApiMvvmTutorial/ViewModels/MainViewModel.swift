@@ -11,15 +11,13 @@ import RxSwift
 struct MainViewModel {
     
     let disposeBag = DisposeBag()
-    let articleService: ArticleServiceProtocol
-    
+    private let articleService: ArticleServiceProtocol
     
     init(articleService: ArticleServiceProtocol) {
         self.articleService = articleService
     }
     
-    
-    func getArticles() -> Observable<[Article]> {
-        articleService.getArticles()
+    func getArticles() -> Observable<[ArticleViewModel]> {
+        articleService.getArticles().map { $0.map { ArticleViewModel(article: $0) } }
     }
 }

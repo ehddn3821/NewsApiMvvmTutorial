@@ -14,8 +14,8 @@ final class MainViewController: UIViewController {
     //MARK: Propertys
     private let disposeBag = DisposeBag()
     private let viewModel: MainViewModel
-    private let articles = BehaviorRelay<[Article]>(value: [])
-    var articlesObserver: Observable<[Article]> { articles.asObservable() }
+    private let articleViewModels = BehaviorRelay<[ArticleViewModel]>(value: [])
+    var articleViewModelObserver: Observable<[ArticleViewModel]> { articleViewModels.asObservable() }
     
     
     //MARK: Life-cycles
@@ -41,14 +41,14 @@ final class MainViewController: UIViewController {
     }
     
     private func getArticles() {
-        viewModel.getArticles().subscribe(onNext: { [weak self] articles in
+        viewModel.getArticles().subscribe(onNext: { [weak self] articleViewModels in
             guard let self = self else { return }
-            self.articles.accept(articles)
+            self.articleViewModels.accept(articleViewModels)
         }).disposed(by: disposeBag)
     }
     
     func subscribeArticles() {
-        articlesObserver.subscribe(onNext: { [weak self] articles in
+        articleViewModelObserver.subscribe(onNext: { [weak self] articleViewModels in
             guard let self = self else { return }
             // ReloadData 시 활용
         }).disposed(by: disposeBag)
