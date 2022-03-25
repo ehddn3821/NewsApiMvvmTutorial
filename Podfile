@@ -11,6 +11,7 @@ target 'NewsApiMvvmTutorial' do
     pod 'RxCocoa', '6.5.0'
     pod 'SnapKit', '~> 5.0.0'
     pod 'Alamofire', '~> 5.5'
+    pod 'Kingfisher', '~> 7.0'
 
   target 'NewsApiMvvmTutorialTests' do
     inherit! :search_paths

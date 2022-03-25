@@ -12,6 +12,7 @@ struct MainViewModel {
     
     let disposeBag = DisposeBag()
     private let articleService: ArticleServiceProtocol
+    let title = "Apple News"
     
     init(articleService: ArticleServiceProtocol) {
         self.articleService = articleService
