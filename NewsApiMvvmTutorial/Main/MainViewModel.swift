@@ -10,7 +10,6 @@ import RxSwift
 
 struct MainViewModel {
     
-    let disposeBag = DisposeBag()
     private let articleService: ArticleServiceProtocol
     let title = "Apple News"
     

@@ -55,6 +55,7 @@ final class MainViewController: UIViewController {
         }
     }
     
+    
     private func getArticles() {
         viewModel.getArticles().subscribe(onNext: { [weak self] articleViewModels in
             guard let self = self else { return }
@@ -87,6 +88,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         cell.viewModel.onNext(viewModel)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let articleViewModel = articleViewModels.value[indexPath.row]
+        navigationController?.pushViewController(DetailViewController(articleViewModel: articleViewModel), animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
